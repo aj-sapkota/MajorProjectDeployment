@@ -106,7 +106,7 @@ class MT5Model(pl.LightningModule):
         return [optimizer]
         # return AdamW(self.parameters(), lr=0.0001)
 
-model=joblib.load('..\mt5base_final_model.joblib')
+model=joblib.load('../mt5base_final_model.joblib')
 
 
 def generate_paraphrase(question1):
