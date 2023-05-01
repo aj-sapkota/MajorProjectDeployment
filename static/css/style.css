@@ -1,0 +1,128 @@
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+
+.menu-bar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-bar li {
+    float: left;
+}
+
+.menu-bar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar a:hover {
+    background-color: #111;
+}
+
+.animated-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    color: #09e011;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 100px;
+    animation: zoom-in 1s ease-in-out;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#input-text,
+#output-text {
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid gray;
+    resize: none;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+#generate-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.textboxes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+}
+
+.input-text-container,
+.output-text-container {
+    width: 400px;
+    height: 300px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+.input-text-container textarea,
+.output-text-container textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#generate-btn:hover {
+    background-color: #0ed718;
+    border-radius: 10px;
+    border-color: #333;
+    transition: all linear 0.3s;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(84, 82, 82);
+}

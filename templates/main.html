@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraphraser App</title>
+</head>
+<body>
+    <h1>Welcome to the Nepali Paraphraser App</h1>
+    <br>
+    <hr>
+    {% if result %}
+        <h1>Sentence: {{sen}}</h1><br>
+        <h1>Generated Paraphrase: {{result}}</h1><br><br>
+    {% endif %}
+    <form action="" method='POST'>
+        {% csrf_token %}
+        Input a sentence: <input type="text" name="sentence" required>
+        <input type="submit" value="Generate Paraphrase"> 
+    </form>
+</body>
+</html>

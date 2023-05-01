@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Paraphrase</title>
+    <link href="{%static '/css/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <h1 class="animated-heading">Generate Paraphrase</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="textboxes-container">
+            <div class="text-wrapper">
+                <label for="input-text" style="margin-left: 15px;">Our Sentence:</label>
+                <textarea id="input-text" name="sentence">{{ input_text }}</textarea>
+            </div>
+            <div class="text-wrapper">
+                <label for="output-text" style="margin-left: 15px;">Paraphrase:</label>
+                <textarea id="output-text" name="output-text" readonly>{% if output_text %}{{ output_text }}{% endif %}</textarea>
+            </div>
+        </div>
+        <button type="submit" id="generate-btn">Generate</button>
+    </form>
+</body>
+</html>
